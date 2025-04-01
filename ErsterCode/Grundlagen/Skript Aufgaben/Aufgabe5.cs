@@ -203,6 +203,52 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
             }
 
             Console.WriteLine();
+            
+            string Frage5_6 = "Bitte geben Sie eine positive Zahl beliebig oft ein (0 zum Beenden):";
+            Console.WriteLine(Frage5_6);
+
+            // Hier verwenden wir den Datentyp long, um auch große Zahlen zu verarbeiten
+            long eingabe;
+            int anzahl = 0;
+            long min2 = long.MaxValue; // Nur hier einmal deklarieren
+            long max2 = long.MinValue; // Nur hier einmal deklarieren
+
+            while (true)
+            {
+                Console.Write("Zahl: ");
+                string input = Console.ReadLine();
+
+                if (!long.TryParse(input, out eingabe) || eingabe < 0)
+                {
+                    Console.WriteLine("Ungültige Eingabe. Bitte eine positive Zahl eingeben.");
+                    continue;
+                }
+
+                if (eingabe == 0)
+                {
+                    break;
+                }
+
+                // Aktualisieren von min und max
+                if (eingabe < min2) min2 = eingabe;
+                if (eingabe > max2) max2 = eingabe;
+
+                anzahl++;
+            }
+
+            string Antwort5_6;
+            if (anzahl > 0)
+            {
+                Antwort5_6 = $"\nAnzahl der eingegebenen Zahlen: {anzahl}\n" +
+                             $"Kleinste Zahl: {min2}\n" +
+                             $"Größte Zahl: {max2}";
+            }
+            else
+            {
+                Antwort5_6 = "\nKeine gültige Zahl eingegeben.";
+            }
+
+            Console.WriteLine(Antwort5_6);
         }
     }
 }
