@@ -1,0 +1,6 @@
+C:\Users\IT\Desktop\ConsoleApplication1\ErsterCode\bin\Debug\ErsterCode.exe
+C:\Users\IT\Desktop\ConsoleApplication1\ErsterCode\bin\Debug\ErsterCode.pdb
+C:\Users\IT\Desktop\ConsoleApplication1\ErsterCode\obj\Debug\ErsterCode.csproj.AssemblyReference.cache
+C:\Users\IT\Desktop\ConsoleApplication1\ErsterCode\obj\Debug\ErsterCode.csproj.CoreCompileInputs.cache
+C:\Users\IT\Desktop\ConsoleApplication1\ErsterCode\obj\Debug\ErsterCode.exe
+C:\Users\IT\Desktop\ConsoleApplication1\ErsterCode\obj\Debug\ErsterCode.pdb
