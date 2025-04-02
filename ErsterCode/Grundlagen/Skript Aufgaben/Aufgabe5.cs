@@ -203,7 +203,7 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
             }
 
             Console.WriteLine();
-            
+
             string Frage5_6 = "Bitte geben Sie eine positive Zahl beliebig oft ein (0 zum Beenden):";
             Console.WriteLine(Frage5_6);
 
@@ -249,6 +249,56 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
             }
 
             Console.WriteLine(Antwort5_6);
+
+            string Frage5_7 =
+                "Erstelle eine Passwortabfrage\n" +
+                "\n" +
+                "Mit Login falsch und Login richtig\n" +
+                "\n";
+
+            Console.WriteLine(Frage5_7);
+
+            // das richtige 
+            char[] correctPassword = { 'P', 'R', 'O', 'G' };
+
+            // Benutzer auffordern
+            Console.WriteLine("Gib das Passwort ein: ");
+
+            string eingabe1 = Console.ReadLine();
+
+            // einheitlich
+            char[] inputArray = eingabe1.ToUpper().ToCharArray();
+
+            // alle drin ?
+            if (inputArray.Length == correctPassword.Length && ContainsAllCharacters(inputArray, correctPassword))
+            {
+                Console.WriteLine("Login erfolgreich!");
+            }
+            else
+            {
+                Console.WriteLine("Login gescheitert!");
+            }
+        }
+
+        // Hilfsmethode
+        static bool ContainsAllCharacters(char[] inputArray, char[] correctPassword)
+        {
+            foreach (char c in correctPassword)
+            {
+                bool found = false;
+                foreach (char inputChar in inputArray)
+                {
+                    if (char.ToUpper(inputChar) == c)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (!found) return false;
+            }
+
+            return true;
         }
     }
 }
