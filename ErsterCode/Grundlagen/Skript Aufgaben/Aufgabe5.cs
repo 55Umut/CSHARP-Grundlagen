@@ -41,11 +41,11 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
                 "Zahlen für ein Datum eingeben mit 3 int Variablen, um herauszufinden, ob es ein Schaltjahr war oder nicht.\n";
             Console.WriteLine(Frage5_2);
 
-            bool eingabenGueltig = false; // Kontrollvariable für die Schleife
+            bool eingabenGueltig = false; // Kontrollvariable
 
-            while (!eingabenGueltig) // Schleife läuft so lange, bis die Eingaben gültig sind
+            while (!eingabenGueltig) // Schleife läuft 
             {
-                // Eingabe der Variablen
+                
                 Console.Write("Geben Sie den Tag ein: ");
                 int tag = Convert.ToInt32(Console.ReadLine());
 
@@ -55,12 +55,12 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
                 Console.Write("Geben Sie das Jahr ein: ");
                 int jahr = Convert.ToInt32(Console.ReadLine());
 
-                // Überprüfen, ob die Eingaben gültig sind (Monat, Tag und Jahr)
+                // Eingaben gültig ? (Monat, Tag und Jahr)
                 if (monat >= 1 && monat <= 12 && tag >= 1 && tag <= 31 && jahr >= 0)
                 {
-                    eingabenGueltig = true; // Eingaben sind gültig, Schleife wird beendet
+                    eingabenGueltig = true; //schleife wird beendet
 
-                    // Schaltjahrprüfung
+                    // Schaltjahr
                     if (DateTime.IsLeapYear(jahr))
                     {
                         Console.WriteLine($"{jahr} war ein Schaltjahr.");
@@ -70,7 +70,7 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
                         Console.WriteLine($"{jahr} war kein Schaltjahr.");
                     }
 
-                    // Überprüfung, ob das eingegebene Datum tatsächlich existiert
+                    // Überprüfung Datum tatsächlich existiert
                     try
                     {
                         DateTime datum = new DateTime(jahr, monat, tag);
@@ -79,16 +79,16 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
                     catch (Exception)
                     {
                         Console.WriteLine("Das eingegebene Datum ist ungültig.");
-                        eingabenGueltig = false; // Falls das Datum ungültig ist, wird die Schleife fortgesetzt
+                        eingabenGueltig = false; // Falls das Datum ungültig ist
                     }
                 }
                 else
                 {
-                    // Ungültige Eingabe, Benutzer wird erneut zur Eingabe aufgefordert
-                    Console.WriteLine("Die Eingaben sind ungültig. Bitte stellen Sie sicher:");
-                    Console.WriteLine("- Monat muss zwischen 1 und 12 liegen.");
-                    Console.WriteLine("- Tag darf nicht größer als 31 sein.");
-                    Console.WriteLine("- Jahr muss größer oder gleich 0 sein.");
+                    // Ungültige Eingabe
+                    Console.WriteLine("Die Eingaben sind ungültig. Bitte stellen Sie sicher: \n");
+                    Console.WriteLine(" - Monat muss zwischen 1 und 12 liegen. \n");
+                    Console.WriteLine(" - Tag darf nicht größer als 31 sein. \n");
+                    Console.WriteLine(" - Jahr muss größer oder gleich 0 sein. \n");
                 }
             }
 
@@ -148,13 +148,13 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
             // Erste Schleife: Startet bei 10 und zählt bis 0
             for (i = 10; i >= 0; i--)
             {
-                // Zweite Schleife: Gibt die Zahlen von i bis 0 aus
+                
                 for (j = i; j >= 0; j--)
                 {
                     Console.Write(j + " ");
                 }
 
-                Console.WriteLine(); // Zeilenumbruch nach jeder inneren Schleife
+                Console.WriteLine(); // Zeilenumbruch
             }
 
             string Frage5_5 =
@@ -207,11 +207,11 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
             string Frage5_6 = "Bitte geben Sie eine positive Zahl beliebig oft ein (0 zum Beenden):";
             Console.WriteLine(Frage5_6);
 
-            // Hier verwenden wir den Datentyp long, um auch große Zahlen zu verarbeiten
+            // datentyp long, um auch große Zahlen zu verarbeiten
             long eingabe;
             int anzahl = 0;
-            long min2 = long.MaxValue; // Nur hier einmal deklarieren
-            long max2 = long.MinValue; // Nur hier einmal deklarieren
+            long min2 = long.MaxValue; 
+            long max2 = long.MinValue; 
 
             while (true)
             {
@@ -229,7 +229,7 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
                     break;
                 }
 
-                // Aktualisieren von min und max
+                // Aktualisierung min und max
                 if (eingabe < min2) min2 = eingabe;
                 if (eingabe > max2) max2 = eingabe;
 

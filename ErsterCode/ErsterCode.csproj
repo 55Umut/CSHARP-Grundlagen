@@ -40,14 +40,20 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Grundlagen\Aufgabe Kunden\Kunden.cs" />
         <Compile Include="Grundlagen\Datentypen.cs" />
         <Compile Include="Grundlagen\eingabe.cs" />
+        <Compile Include="Grundlagen\Objektorientiert\Auto.cs" />
+        <Compile Include="Grundlagen\Objektorientiert\Krieger.cs" />
+        <Compile Include="Grundlagen\Objektorientiert\Laptop.cs" />
+        <Compile Include="Grundlagen\Objektorientiert\Motherboard.cs" />
         <Compile Include="Grundlagen\Operatoren.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe1.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe2.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe3.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe4.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe5.cs" />
+        <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe6.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\AufgabenOrga.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Selektionen.cs" />
         <Compile Include="Programm.cs" />
