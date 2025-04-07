@@ -48,6 +48,7 @@
         <Compile Include="Grundlagen\Objektorientiert\Laptop.cs" />
         <Compile Include="Grundlagen\Objektorientiert\Motherboard.cs" />
         <Compile Include="Grundlagen\Operatoren.cs" />
+        <Compile Include="Grundlagen\Skript Aufgaben\Anzeige.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe1.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe2.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe3.cs" />
@@ -55,6 +56,12 @@
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe5.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe6.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\AufgabenOrga.cs" />
+        <Compile Include="Grundlagen\Skript Aufgaben\Fahrzeug.cs" />
+        <Compile Include="Grundlagen\Skript Aufgaben\Kreis.cs" />
+        <Compile Include="Grundlagen\Skript Aufgaben\Linie.cs" />
+        <Compile Include="Grundlagen\Skript Aufgaben\Person.cs" />
+        <Compile Include="Grundlagen\Skript Aufgaben\Punkt.cs" />
+        <Compile Include="Grundlagen\Skript Aufgaben\Rechteck.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Selektionen.cs" />
         <Compile Include="Programm.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>

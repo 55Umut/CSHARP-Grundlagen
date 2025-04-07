@@ -26,7 +26,7 @@ namespace ErsterCode.Grundlagen.Skript_Aufgaben
                 this.hausnummer = 57;
                 this.kundennummer = "01"; 
             }
-
+ 
             // Konstruktor mit Parametern
             public Kunden(string vorname, string nachname, string strasse, int plz, string ort, int hausnummer,
                 string kundennummer)
