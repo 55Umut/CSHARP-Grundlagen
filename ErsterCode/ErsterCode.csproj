@@ -63,6 +63,12 @@
         <Compile Include="Grundlagen\Skript Aufgaben\Punkt.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Rechteck.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Selektionen.cs" />
+        <Compile Include="Grundlagen\Vererbung\Humanoid.cs" />
+        <Compile Include="Grundlagen\Vererbung\Jaeger.cs" />
+        <Compile Include="Grundlagen\Vererbung\Krieger.cs" />
+        <Compile Include="Grundlagen\Vererbung\Magier.cs" />
+        <Compile Include="Grundlagen\Vererbung\tester.cs" />
+        <Compile Include="Grundlagen\Vererbung\VererbungTester.cs" />
         <Compile Include="Programm.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>

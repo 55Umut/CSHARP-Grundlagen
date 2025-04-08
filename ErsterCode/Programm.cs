@@ -8,6 +8,7 @@ using ErsterCode.Grundlagen;
 using ErsterCode.Grundlagen.Aufgabe_Kunden;
 using ErsterCode.Grundlagen.Objektorientiert;
 using ErsterCode.Grundlagen.Skript_Aufgaben;
+using ErsterCode.Grundlagen.Vererbung;
 
 //Welches Projekt/Welcher Ordner
 namespace ErsterCode
@@ -99,7 +100,7 @@ namespace ErsterCode
 
 
 
-            */
+            
 
 
             {
@@ -163,11 +164,14 @@ namespace ErsterCode
                 Console.WriteLine("\nDrücken Sie eine Taste, um das Programm zu beenden...");
                 Console.ReadKey();
             }
-
+            */
             void AusgabePunkt(string name, Punkt p)
             {
                 Console.WriteLine($"{name}: ({p.GetX()}, {p.GetY()})");
             }
+            
+            
+            VererbungTester.run();
         }
         // Konstruktor 
         // Funktionen

@@ -2,7 +2,7 @@
 
 namespace ErsterCode.Grundlagen.Aufgabe_Kunden
 {
-    public class Kunden
+    public class Kunden 
     {
         public string vorname;
         public string nachname;
