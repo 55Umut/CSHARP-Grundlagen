@@ -40,6 +40,16 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Grundlagen\Abstrakt\Axolotl.cs" />
+        <Compile Include="Grundlagen\Abstrakt\Hund.cs" />
+        <Compile Include="Grundlagen\Abstrakt\IGeschwindigkeit.cs" />
+        <Compile Include="Grundlagen\Abstrakt\ITauchzeit.cs" />
+        <Compile Include="Grundlagen\Abstrakt\Kunde.cs" />
+        <Compile Include="Grundlagen\Abstrakt\KundenManager.cs" />
+        <Compile Include="Grundlagen\Abstrakt\Optionen.cs" />
+        <Compile Include="Grundlagen\Abstrakt\Person.cs" />
+        <Compile Include="Grundlagen\Abstrakt\Tier.cs" />
+        <Compile Include="Grundlagen\Abstrakt\WasserTier.cs" />
         <Compile Include="Grundlagen\Aufgabe Kunden\Kunden.cs" />
         <Compile Include="Grundlagen\Datentypen.cs" />
         <Compile Include="Grundlagen\eingabe.cs" />
@@ -69,8 +79,18 @@
         <Compile Include="Grundlagen\Vererbung\Magier.cs" />
         <Compile Include="Grundlagen\Vererbung\tester.cs" />
         <Compile Include="Grundlagen\Vererbung\VererbungTester.cs" />
+        <Compile Include="Grundlagen\Zooaufgabe\Delfin.cs" />
+        <Compile Include="Grundlagen\Zooaufgabe\Elefant.cs" />
+        <Compile Include="Grundlagen\Zooaufgabe\Landtier.cs" />
+        <Compile Include="Grundlagen\Zooaufgabe\Nashorn.cs" />
+        <Compile Include="Grundlagen\Zooaufgabe\Wal.cs" />
+        <Compile Include="Grundlagen\Zooaufgabe\Wassertiere.cs" />
+        <Compile Include="Grundlagen\Zooaufgabe\ZooTiere.cs" />
         <Compile Include="Programm.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Grundlagen\Selbstlern\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

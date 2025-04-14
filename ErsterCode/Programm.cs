@@ -5,6 +5,7 @@ using System;
 using System.Resources;
 // Immer nutzen bei ausgaben
 using ErsterCode.Grundlagen;
+using ErsterCode.Grundlagen.Abstrakt;
 using ErsterCode.Grundlagen.Aufgabe_Kunden;
 using ErsterCode.Grundlagen.Objektorientiert;
 using ErsterCode.Grundlagen.Skript_Aufgaben;
@@ -164,7 +165,7 @@ namespace ErsterCode
                 Console.WriteLine("\nDrücken Sie eine Taste, um das Programm zu beenden...");
                 Console.ReadKey();
             }
-            */
+            
             void AusgabePunkt(string name, Punkt p)
             {
                 Console.WriteLine($"{name}: ({p.GetX()}, {p.GetY()})");
@@ -172,6 +173,23 @@ namespace ErsterCode
             
             
             VererbungTester.run();
+            
+            
+            
+            
+            
+            Kunde kunde = new Kunde();
+            kunde.Ausgabe();
+            
+            */
+            
+            
+            
+            
+            
+            
+            
+            
         }
         // Konstruktor 
         // Funktionen
