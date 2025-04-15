@@ -187,7 +187,7 @@ namespace ErsterCode
 
             Bubblesort.run2();
              */
-            
+            Arraylists.run3();
             
             
             
