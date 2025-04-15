@@ -186,10 +186,34 @@ namespace ErsterCode
 
 
             Bubblesort.run2();
-             */
+             
             Arraylists.run3();
             
-            
+            */
+            Auswertung auswertung = new Auswertung();
+            while (true)
+            {
+                Console.WriteLine("1: Wert hinzufügen, 2: Durchschnitt, 3: Werte anzeigen, 0: Beenden");
+                var eingabe = Console.ReadLine();
+                if (eingabe == "1")
+                {
+                    Console.Write("Wert eingeben: ");
+                    if (double.TryParse(Console.ReadLine(), out double wert))
+                        auswertung.AddWert(wert);
+                }
+                else if (eingabe == "2")
+                {
+                    Console.WriteLine("Durchschnitt: " + auswertung.BerechneDurchschnitt());
+                }
+                else if (eingabe == "3")
+                {
+                    auswertung.WerteAusgeben();
+                }
+                else if (eingabe == "0")
+                {
+                    break;
+                }
+            }
             
         }
         // Konstruktor 
