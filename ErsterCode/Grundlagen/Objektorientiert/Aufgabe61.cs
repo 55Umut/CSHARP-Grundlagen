@@ -4,14 +4,12 @@ using System.Collections.Generic;
 public class Auswertung
 {
     private List<double> werte = new List<double>();
-
-    // Messwert hinzufügen
+    
     public void AddWert(double wert)
     {
         werte.Add(wert);
     }
-
-    // Durchschnitt berechnen
+    
     public double BerechneDurchschnitt()
     {
         if (werte.Count == 0) return 0;
@@ -20,8 +18,7 @@ public class Auswertung
             summe += wert;
         return summe / werte.Count;
     }
-
-    // Alle Werte ausgeben
+    
     public void WerteAusgeben()
     {
         Console.WriteLine("Messwerte:");
@@ -29,8 +26,6 @@ public class Auswertung
             Console.WriteLine(wert);
     }
 }
-
-// Beispiel für eine einfache Konsolen-Benutzeroberfläche
 class Program
 {
     static void run4()
