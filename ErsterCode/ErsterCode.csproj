@@ -54,6 +54,7 @@
         <Compile Include="Grundlagen\Datentypen.cs" />
         <Compile Include="Grundlagen\eingabe.cs" />
         <Compile Include="Grundlagen\Objektorientiert\Auto.cs" />
+        <Compile Include="Grundlagen\Objektorientiert\Bubblesort.cs" />
         <Compile Include="Grundlagen\Objektorientiert\Krieger.cs" />
         <Compile Include="Grundlagen\Objektorientiert\Laptop.cs" />
         <Compile Include="Grundlagen\Objektorientiert\Motherboard.cs" />

@@ -8,6 +8,7 @@ using ErsterCode.Grundlagen;
 using ErsterCode.Grundlagen.Abstrakt;
 using ErsterCode.Grundlagen.Aufgabe_Kunden;
 using ErsterCode.Grundlagen.Objektorientiert;
+using static ErsterCode.Grundlagen.Objektorientiert.Bubblesort;
 using ErsterCode.Grundlagen.Skript_Aufgaben;
 using ErsterCode.Grundlagen.Vererbung;
 
@@ -181,11 +182,11 @@ namespace ErsterCode
             Kunde kunde = new Kunde();
             kunde.Ausgabe();
             
-            */
-            
-            
-            
-            
+           
+
+
+            Bubblesort.run2();
+             */
             
             
             
