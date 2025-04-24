@@ -51,6 +51,7 @@
         <Compile Include="Grundlagen\Abstrakt\Tier.cs" />
         <Compile Include="Grundlagen\Abstrakt\WasserTier.cs" />
         <Compile Include="Grundlagen\Aufgabe Kunden\Kunden.cs" />
+        <Compile Include="Grundlagen\Auftrag\Bibliothekssoftware.cs" />
         <Compile Include="Grundlagen\Datentypen.cs" />
         <Compile Include="Grundlagen\eingabe.cs" />
         <Compile Include="Grundlagen\Objektorientiert\Arraylists.cs" />
@@ -61,6 +62,9 @@
         <Compile Include="Grundlagen\Objektorientiert\Laptop.cs" />
         <Compile Include="Grundlagen\Objektorientiert\Motherboard.cs" />
         <Compile Include="Grundlagen\Operatoren.cs" />
+        <Compile Include="Grundlagen\Selbstlern\Pokemons.cs" />
+        <Compile Include="Grundlagen\Selbstlern\Trainer.cs" />
+        <Compile Include="Grundlagen\Selbstlern\Zimmer.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Anzeige.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe1.cs" />
         <Compile Include="Grundlagen\Skript Aufgaben\Aufgabe2.cs" />
@@ -91,9 +95,6 @@
         <Compile Include="Grundlagen\Zooaufgabe\ZooTiere.cs" />
         <Compile Include="Programm.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Grundlagen\Selbstlern\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

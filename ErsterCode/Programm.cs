@@ -1,16 +1,17 @@
-﻿//Import
-// wenn das nicht in jeder datei ist wird es Console nicht erlauben
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Resources;
+// using Bibliothekssoftware;
 // Immer nutzen bei ausgaben
-using ErsterCode.Grundlagen;
-using ErsterCode.Grundlagen.Abstrakt;
-using ErsterCode.Grundlagen.Aufgabe_Kunden;
-using ErsterCode.Grundlagen.Objektorientiert;
-using static ErsterCode.Grundlagen.Objektorientiert.Bubblesort;
-using ErsterCode.Grundlagen.Skript_Aufgaben;
-using ErsterCode.Grundlagen.Vererbung;
+// using ErsterCode.Grundlagen;
+// using ErsterCode.Grundlagen.Abstrakt;
+// using ErsterCode.Grundlagen.Aufgabe_Kunden;
+// using ErsterCode.Grundlagen.Objektorientiert;
+using ErsterCode.Grundlagen.Selbstlern;
+// using static ErsterCode.Grundlagen.Objektorientiert.Bubblesort;
+// using ErsterCode.Grundlagen.Skript_Aufgaben;
+// using ErsterCode.Grundlagen.Vererbung;
+using programm;
 
 //Welches Projekt/Welcher Ordner
 namespace ErsterCode
@@ -102,7 +103,7 @@ namespace ErsterCode
 
 
 
-            
+
 
 
             {
@@ -166,37 +167,115 @@ namespace ErsterCode
                 Console.WriteLine("\nDrücken Sie eine Taste, um das Programm zu beenden...");
                 Console.ReadKey();
             }
-            
+
             void AusgabePunkt(string name, Punkt p)
             {
                 Console.WriteLine($"{name}: ({p.GetX()}, {p.GetY()})");
             }
-            
-            
+
+
             VererbungTester.run();
-            
-            
-            
-            
-            
+
+
+
+
+
             Kunde kunde = new Kunde();
             kunde.Ausgabe();
-            
-           
+
+
 
 
             Bubblesort.run2();
-             
+
             Arraylists.run3();
-            
-            */
+
+
             // Aufgabe 61: Messwerte-Manager
             Console.WriteLine("Aufgabe 61: Messwerte-Manager");
             Console.WriteLine("=============================");
-            
+
             // Auswertung-Objekt erstellen und run4-Methode aufrufen
             Auswertung auswertung = new Auswertung();
             auswertung.run4();
+
+
+
+            Bibliothekssystem system = new Bibliothekssystem();
+            system.DemoModus();
+
+
+
+            */
+
+            //Zimmer schlafzimmer = new Zimmer("Schlafzimmer",6,5,2.4,3,2);
+            /*schlafzimmer.setBezeichnung("Schlafzimmer");
+            schlafzimmer.setBreite(6);
+            schlafzimmer.setLaenge(5);
+            schlafzimmer.setHoehe(2.4);
+            schlafzimmer.setAnzahlFenster(3);
+            schlafzimmer.SetAnzahlTueren(2);
+            Console.WriteLine($"Grundfläche: {schlafzimmer.BerechneGrundflaeche()}");
+            Console.WriteLine($"Wandfläche: {schlafzimmer.BerechneWandflaeche()}");
+
+            Zimmer wohnzimmer = new Zimmer("Wohnzimmer",9,8,2.4,2,4);
+            Zimmer kueche = new Zimmer("Kueche",4,3,2.4,1,2);
+            schlafzimmer.DetailsAusgaben();
+            wohnzimmer.DetailsAusgaben();
+
+            Zimmer[] wohnung = new Zimmer[3];
+            wohnung[0] = schlafzimmer;
+            wohnung[1] = wohnzimmer;
+            wohnung[2] = kueche;
+            for (int i = 0; i < wohnung.Length; i++)
+            {
+                Console.WriteLine("Bezeichnung ?");
+                string bezeichnung = Console.ReadLine();
+                Console.WriteLine("Länge ?");
+                double laenge = double.Parse(Console.ReadLine());
+                Console.WriteLine("Breite ?");
+                double breite = double.Parse(Console.ReadLine());
+                Console.WriteLine("Höhe ?");
+                double hoehe = double.Parse(Console.ReadLine());
+                Console.WriteLine("Anzahl der Türen ?");
+                int anzahlTueren = int.Parse(Console.ReadLine());
+                Console.WriteLine("Anzahl der Fenster ?");
+                int anzahlFenster = int.Parse(Console.ReadLine());
+
+            }
+                */
+
+            Pokemons Glumanda = new Pokemons("Glumanda", "Feuer", "Kopfnuss", 20, 10, 100);
+            Pokemons Pikachu = new Pokemons("Pikachu", "Donnerblitz", "Kopfnuss", 20, 10, 100);
+            Pokemons Shiggy = new Pokemons("Shiggy", "Kopfnuss", "Kopfnuss", 20, 10, 100);
+            Trainer trainer1 = new Trainer("Ash", Pikachu, 1);
+            Trainer trainer2 = new Trainer("Garry", Glumanda, 1);
+            Trainer trainer3 = new Trainer("Misty", Shiggy, 1);
+            bool kampf = true;
+            Trainer[] trainers = new Trainer[2];
+            Pokemons[] pokedex = new Pokemons[2];
+            Random rnd = new Random();
+                Console.WriteLine($"Hallo Willkommen! \nunsere Trainer {trainer1.GetName()} , {trainer2.GetName()} , {trainer3.GetName()} \nmöchten heute die Pokemon {Pikachu.GetName()} , {Glumanda.GetName()} , {Shiggy.GetName()} \nkämpfen lassen !! \n");
+                while (kampf)
+                {
+                Console.WriteLine($"Trainer {trainer1.GetName()} greift {trainer2.GetName()} an! ");
+                
+                Pikachu.Atk1(Glumanda);
+                kampf = Pikachu.PokemonLeben(Glumanda);
+                if (kampf == false)
+                {
+                    break;
+                }
+                Console.WriteLine($"\nDer Trainer {trainer2.GetName()} greift {trainer1.GetName()} an! ");
+                Glumanda.Atk1(Pikachu);
+                Console.WriteLine($"\n ");
+                kampf = Glumanda.PokemonLeben(Pikachu);
+                if (kampf == false)
+                {
+                    break;
+                }
+                
+            }
         }
         // Konstruktor 
         // Funktionen
