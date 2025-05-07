@@ -26,26 +26,27 @@ namespace Online_Shop.Views
 
         public static void ProdukteInsert()
         {
+            int inputID = GetIntInput("ID: ");
             int inputArtikelnr = GetIntInput("Artikelnummer:");
             string inputProduktName = GetStringInput("Produktname:");
             int inputPreis = GetIntInput("Preis:");
             string inputBeschreibung = GetStringInput("Beschreibung:");
             int inputAnzahl = GetIntInput("Anzahl:");
 
-            Produkt tempProdukt = new Produkt(inputArtikelnr, inputProduktName, inputPreis, inputBeschreibung, inputAnzahl);
+            Produkt tempProdukt = new Produkt(inputID,inputArtikelnr, inputProduktName, inputPreis, inputBeschreibung, inputAnzahl);
             DB_Produkte.Insert(tempProdukt);
         }
 
         public static void ProdukteUpdate()
         {
-            int id = GetIntInput("Produkt-ID:");
+            int id = GetIntInput("Produkt ID:");
             int artikelnr = GetIntInput("Neue Artikelnummer:");
             string name = GetStringInput("Neuer Produktname:");
             int preis = GetIntInput("Neuer Preis:");
             string beschreibung = GetStringInput("Neue Beschreibung:");
             int anzahl = GetIntInput("Neue Anzahl:");
 
-            Produkt updated = new Produkt(artikelnr, name, preis, beschreibung, anzahl);
+            Produkt updated = new Produkt(id,artikelnr, name, preis, beschreibung, anzahl);
             DB_Produkte.Update(id, updated);
         }
 
@@ -58,7 +59,7 @@ namespace Online_Shop.Views
                 Console.WriteLine("2 Produkt hinzufügen");
                 Console.WriteLine("3 Produkt bearbeiten");
                 Console.WriteLine("4 Produkt löschen");
-                Console.WriteLine("5 Zurück");
+                Console.WriteLine("5 Zurück\n");
 
                 int input = GetIntInput("Option:");
 
@@ -98,7 +99,7 @@ namespace Online_Shop.Views
                 Console.WriteLine("2 Kunde hinzufügen");
                 Console.WriteLine("3 Kunde bearbeiten");
                 Console.WriteLine("4 Kunde löschen");
-                Console.WriteLine("5 Zurück");
+                Console.WriteLine("5 Zurück\n");
 
                 int input = GetIntInput("Option:");
 
@@ -147,7 +148,7 @@ namespace Online_Shop.Views
                 Console.WriteLine("\n=== Hauptmenü ===");
                 Console.WriteLine("1 Produkte");
                 Console.WriteLine("2 Kunden");
-                Console.WriteLine("3 Beenden");
+                Console.WriteLine("3 Beenden\n");
 
                 int input = GetIntInput("Bitte wählen:");
 
@@ -181,7 +182,7 @@ namespace Online_Shop.Views
                 Console.WriteLine("\n=== Login-Menü ===");
                 Console.WriteLine("1 Anmelden");
                 Console.WriteLine("2 Registrieren");
-                Console.WriteLine("3 Beenden");
+                Console.WriteLine("3 Beenden\n");
 
                 int input = GetIntInput("Bitte wählen:");
 
@@ -194,12 +195,12 @@ namespace Online_Shop.Views
                         if (DB_Benutzer.Login(benutzername, passwort))
                         {
                             AktuellerBenutzer = benutzername;
-                            Console.WriteLine($"\n✅ Login erfolgreich! Willkommen, {AktuellerBenutzer}");
+                            Console.WriteLine($"Login erfolgreich! Willkommen, {AktuellerBenutzer}");
                             return; // zurück zum Hauptprogramm
                         }
                         else
                         {
-                            Console.WriteLine("❌ Login fehlgeschlagen. Bitte erneut versuchen.");
+                            Console.WriteLine("Login fehlgeschlagen. Bitte erneut versuchen.");
                         }
                         break;
 
@@ -210,11 +211,11 @@ namespace Online_Shop.Views
 
                         if (DB_Benutzer.Register(neuerBenutzer, neuesPasswort, email))
                         {
-                            Console.WriteLine("✅ Registrierung erfolgreich! Sie können sich nun einloggen.");
+                            Console.WriteLine("Registrierung erfolgreich! \nSie können sich nun einloggen.");
                         }
                         else
                         {
-                            Console.WriteLine("❌ Benutzername oder E-Mail bereits vergeben.");
+                            Console.WriteLine("Benutzername oder E-Mail bereits vergeben.");
                         }
                         break;
 
@@ -232,3 +233,4 @@ namespace Online_Shop.Views
 
     }
 }
+// Todo 

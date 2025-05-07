@@ -33,7 +33,7 @@ namespace Online_Shop.Views
                         break;
                 }
 
-                Console.WriteLine("\nZum Fortfahren eine Taste drücken...");
+                Console.WriteLine("Zum Fortfahren eine Taste drücken...");
                 Console.ReadKey();
             }
         }
@@ -48,12 +48,12 @@ namespace Online_Shop.Views
 
             if (DB_Benutzer.Login(benutzername, passwort))
             {
-                Console.WriteLine("✅ Login erfolgreich!");
+                Console.WriteLine("Login erfolgreich!");
                 // Hier könntest du Benutzer-spezifisches Menü starten
             }
             else
             {
-                Console.WriteLine("❌ Login fehlgeschlagen! Überprüfe Benutzername oder Passwort.");
+                Console.WriteLine("Login fehlgeschlagen! Überprüfe Benutzername oder Passwort.");
             }
         }
 
@@ -72,11 +72,11 @@ namespace Online_Shop.Views
 
             if (success)
             {
-                Console.WriteLine("✅ Registrierung erfolgreich!");
+                Console.WriteLine("Registrierung erfolgreich!");
             }
             else
             {
-                Console.WriteLine("❌ Registrierung fehlgeschlagen!");
+                Console.WriteLine("Registrierung fehlgeschlagen!");
             }
         }
     }

@@ -1,15 +1,17 @@
-﻿namespace Online_Shop.Models
+﻿using MySqlConnector;
+
+namespace Online_Shop.Models
 {
     public class Produkt
     {
-        private int _id;
+        private int id;
         private int artikelnummer;
         private string produktname;
         private int preis;
         private string beschreibung;
         private int anzahl;
         
-        public Produkt(int artikelnummer, string produktname, int preis, string beschreibung, int anzahl)
+        public Produkt(int id, int artikelnummer, string produktname, int preis, string beschreibung, int anzahl)
         {
             this.artikelnummer = artikelnummer;
             this.produktname = produktname;
@@ -17,12 +19,13 @@
             this.beschreibung = beschreibung;
             this.anzahl = anzahl;
         }
+
         
         
         public int Id
         {
-            get => _id;
-            set => _id = value;
+            get => id;
+            set => id = value;
         }
 
         public int Artikelnummer
@@ -56,4 +59,5 @@
         }
         
     }
+   
 }

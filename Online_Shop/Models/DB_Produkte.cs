@@ -76,11 +76,11 @@ namespace Online_Shop.Models
             int rowsAffected = command.ExecuteNonQuery();
             if (rowsAffected > 0)
             {
-                Console.WriteLine("Produkt erfolgreich gelöscht.");
+                Console.WriteLine("Produkt erfolgreich gelöscht.\n");
             }
             else
             {
-                Console.WriteLine("Fehler beim Löschen des Produkts.");
+                Console.WriteLine("Fehler beim Löschen des Produkts.\n");
             }
         }
         
@@ -105,11 +105,11 @@ namespace Online_Shop.Models
                 int rowsAffected = command.ExecuteNonQuery(); // Führt die SQL-Anweisung aus
                 if (rowsAffected > 0)
                 {
-                    Console.WriteLine($"Datensatz wurde erfolgreich eingefügt!");
+                    Console.WriteLine($"Datensatz wurde erfolgreich eingefügt!\n");
                 }
                 else
                 {
-                    Console.WriteLine("Fehler beim Einfügen des Produkts.");
+                    Console.WriteLine("Fehler beim Einfügen des Produkts.\n");
                 }
             }
             catch (MySqlException ex)
@@ -154,17 +154,40 @@ namespace Online_Shop.Models
                 // Erfolg oder Fehler ausgeben
                 if (rowsAffected > 0)
                 {
-                    Console.WriteLine("Produkt erfolgreich aktualisiert.");
+                    Console.WriteLine("Produkt erfolgreich aktualisiert.\n");
                 }
                 else
                 {
-                    Console.WriteLine("Kein Produkt mit dieser ID gefunden.");
+                    Console.WriteLine("Kein Produkt mit dieser ID gefunden.\n");
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Fehler beim Aktualisieren des Produkts: {ex.Message}");
             }
+            
+        }
+        public static Produkt GetProduktByID(int id)
+        {
+            string query = "SELECT * FROM produkt WHERE id="+ id +";";
+            MySqlCommand command = new MySqlCommand(query, connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            
+            Produkt produkt = null;
+            while (reader.Read())
+            {
+                int id2 = reader.GetInt32("id");
+                int artikelnummer = reader.GetInt32("artikelnummer");
+                string produktname = reader["produktname"].ToString();
+                int preis = reader.GetInt32("preis");
+                string beschreibung = reader["beschreibung"].ToString();
+                int anzahl = reader.GetInt32("anzahl");
+                
+                produkt = new Produkt(id2,artikelnummer, produktname, preis, beschreibung, anzahl);
+                Console.WriteLine($"ID: {id2} | Artikelnummer: {artikelnummer} | Produktname: {produktname} | Preis: {preis} | Beschreibung: {beschreibung} | Anzahl: {anzahl}");
+                
+            } 
+            return produkt;
         }
     }
 }
